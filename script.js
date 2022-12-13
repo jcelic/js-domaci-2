@@ -82,11 +82,22 @@ if (sum < 10) {
 const array = process.argv.slice(2); // u konzolu idu samo rijeci s razmakom - bez zagrada, navodnika i zareza
 const fruitsArray = []; // samo za voce
 
+// function isFruit(fruit) {
+//   if (fruit === 'jabuka' || fruit === 'naranca' || fruit === 'banana' || fruit === 'kruska' || fruit === 'jagoda') {
+//     return true;
+//   }
+// }
+
 function isFruit(fruit) {
-  if (fruit === 'jabuka' || fruit === 'naranca' || fruit === 'banana' || fruit === 'kruska' || fruit === 'jagoda') {
-    return true;
-  }
+  return (
+    fruit === "jabuka" ||
+    fruit === "naranca" ||
+    fruit === "banana" ||
+    fruit === "kruska" ||
+    fruit === "jagoda"
+  );
 }
+
 
 for (let i = 0; i < array.length; i++) {
   if (isFruit(array[i])) {
@@ -105,7 +116,7 @@ console.log(fruitsArray);
 
 // 4.	Napravi niz proizvoljnih podataka, pa iz tog niza izbaci sve članove koji nisu broj, te od tog dobijenog niza napravi novi niz koji je obrnutog redoslijeda
 
-
+// KORISTECI 2 PETLJE
 const array = [1, 5, 'hello', 34, 'world', 397, false, 'lorem', 24, true, 18, 'ipsum'];
 const numbersArray = []; // samo za brojeve
 const reversedArray = [];
@@ -116,7 +127,6 @@ for (let i = 0; i < array.length; i++) {
     numbersArray.push(array[i]);
   }
 }
-
 console.log(numbersArray);
 
 
@@ -124,8 +134,23 @@ for (let i = numbersArray.length - 1; i >= 0; i--) {
   // reversedArray[reversedArray.length] = numbersArray[i];
   reversedArray.push(numbersArray[i]);
 }
-
 console.log(reversedArray);
+
+
+
+// KORISTECI SAMO JEDNU PETLJU
+const array = [1, 5, 'hello', 34, 'world', 397, false, 'lorem', 24, true, 18, 'ipsum'];
+const newArray = [];
+
+for (let i = array.length - 1; i >= 0; i--) {
+  if (typeof array[i] === 'number') {
+    // newArray[newArray.length] = array[i];
+    newArray.push(array[i]);
+  }
+}
+
+console.log(newArray);
+
 
 
 
