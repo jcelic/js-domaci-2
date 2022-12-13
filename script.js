@@ -22,7 +22,7 @@ console.log(sum); // 180
 
 // 2.	Pronađi najmanji i najveći član niza i zbroji te brojeve, pa ako je zbroj manji od 10, ispiši "Zbroj je jednoznamenkast", a ako je veći od 10, ispiši taj broj
 
-const numbers = [63, 89, 4, 7, 124, 16, 34, 57, 1, 2, 13];
+const numbers = [1, 63, 89, 4, 7, 124, 16, 34, 57, 2, 13];
 
 function min(array) {
   let min = array[0];
@@ -146,6 +146,7 @@ console.log(reversedArray);
 // 0
 
 
+
 function createPattern(value) {
   let str = '';
 
@@ -156,11 +157,11 @@ function createPattern(value) {
 
   let i = str.length - 1;
 
-  do {
+  while (i >= 0) {
     console.log(str);
     i--;
     str = str.slice(0, -1);
-  } while (i >= 0);
+  }
 }
 
 createPattern(9);
