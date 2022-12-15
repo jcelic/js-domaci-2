@@ -1,21 +1,15 @@
 // 1.	Izračunaj sumu svih parnih brojeva nekog proizvoljnog niza od minimalno 10 članova.
 
-// const numbers = [1, 2, 4, 7, 13, 16, 34, 57, 63, 89, 124];
+const numbers = [1, 2, 4, 7, 13, 16, 34, 57, 63, 89, 124];
 
-// function addEvenNums(array) {
-//   let sum = 0;
+function addEvenNums(array) {
+  const sum = array.filter(num => num % 2 === 0).reduce((total, num) => total + num);
+  return sum;
+}
 
-//   for (let i = 0; i < array.length; i++) {
-//     if (array[i] % 2 === 0) {
-//       sum += array[i];
-//     }
-//   }
+const sum = addEvenNums(numbers);
+console.log(sum); // 180
 
-//   return sum;
-// }
-
-// const sum = addEvenNums(numbers);
-// console.log(sum); // 180
 
 
 
