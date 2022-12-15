@@ -61,11 +61,10 @@ function minMaxSum(array) {
 
 const sum = minMaxSum(numbers);
 
-if (sum < 10) {
-  console.log('Broj je jednoznamenkast');
-} else {
-  console.log(sum); // 125
-}
+const test = sum < 10 ? 'Broj je jednoznamenkast' : sum;
+
+console.log(test); // 125
+
 
 
 
@@ -75,12 +74,9 @@ if (sum < 10) {
 
 // 3.	Iz niza stringova unijetih preko konzole, izbaci sve što nije voće
 
-// valjda nije problem to što teoretski u unesenom nizu moze biti neka sesta ili deseta vrsta voca
-
-
 // const array = ['jabuka', 'hello', 'naranca', 'world', 'banana', 'javscript', 'kruska', 'lorem', 'ipsum', 'jagoda']; // test
-const array = process.argv.slice(2); // u konzolu idu samo rijeci s razmakom - bez zagrada, navodnika i zareza
-const fruitsArray = []; // samo za voce
+const array = process.argv.slice(2);
+const fruitsArray = [];
 
 // function isFruit(fruit) {
 //   if (fruit === 'jabuka' || fruit === 'naranca' || fruit === 'banana' || fruit === 'kruska' || fruit === 'jagoda') {
@@ -88,20 +84,25 @@ const fruitsArray = []; // samo za voce
 //   }
 // }
 
+// function isFruit(fruit) {
+//   return (
+//     fruit === "jabuka" ||
+//     fruit === "naranca" ||
+//     fruit === "banana" ||
+//     fruit === "kruska" ||
+//     fruit === "jagoda"
+//   );
+// }
+
 function isFruit(fruit) {
-  return (
-    fruit === "jabuka" ||
-    fruit === "naranca" ||
-    fruit === "banana" ||
-    fruit === "kruska" ||
-    fruit === "jagoda"
-  );
+  const filter = ['jabuka', 'naranca', 'banana', 'kruska', 'jagoda'];
+
+  return filter.includes(fruit);
 }
 
 
 for (let i = 0; i < array.length; i++) {
   if (isFruit(array[i])) {
-    // fruitsArray[fruitsArray.length] = array[i];
     fruitsArray.push(array[i]);
   }
 }
@@ -118,12 +119,11 @@ console.log(fruitsArray);
 
 // KORISTECI 2 PETLJE
 const array = [1, 5, 'hello', 34, 'world', 397, false, 'lorem', 24, true, 18, 'ipsum'];
-const numbersArray = []; // samo za brojeve
+const numbersArray = [];
 const reversedArray = [];
 
 for (let i = 0; i < array.length; i++) {
   if (typeof array[i] === 'number') {
-    // numbersArray[numbersArray.length] = array[i];
     numbersArray.push(array[i]);
   }
 }
@@ -131,20 +131,18 @@ console.log(numbersArray);
 
 
 for (let i = numbersArray.length - 1; i >= 0; i--) {
-  // reversedArray[reversedArray.length] = numbersArray[i];
   reversedArray.push(numbersArray[i]);
 }
 console.log(reversedArray);
 
 
 
-// KORISTECI SAMO JEDNU PETLJU
+// KORISTECI JEDNU PETLJU
 const array = [1, 5, 'hello', 34, 'world', 397, false, 'lorem', 24, true, 18, 'ipsum'];
 const newArray = [];
 
 for (let i = array.length - 1; i >= 0; i--) {
   if (typeof array[i] === 'number') {
-    // newArray[newArray.length] = array[i];
     newArray.push(array[i]);
   }
 }
