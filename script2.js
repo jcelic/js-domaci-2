@@ -78,7 +78,7 @@ const randomArray = [1, 5, 'hello', 34, 'world', 397, false, 'lorem', 24, true, 
 
 function getReversedNums(array) {
   const numsArray = array.filter(num => {
-    return (typeof num === 'number');
+    return typeof num === 'number';
   })
 
   return numsArray.reverse();
