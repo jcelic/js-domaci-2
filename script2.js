@@ -1,21 +1,21 @@
 // 1.	Izračunaj sumu svih parnih brojeva nekog proizvoljnog niza od minimalno 10 članova.
 
-const numbers = [1, 2, 4, 7, 13, 16, 34, 57, 63, 89, 124];
+// const numbers = [1, 2, 4, 7, 13, 16, 34, 57, 63, 89, 124];
 
-function addEvenNums(array) {
-  let sum = 0;
+// function addEvenNums(array) {
+//   let sum = 0;
 
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] % 2 === 0) {
-      sum += array[i];
-    }
-  }
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] % 2 === 0) {
+//       sum += array[i];
+//     }
+//   }
 
-  return sum;
-}
+//   return sum;
+// }
 
-const sum = addEvenNums(numbers);
-console.log(sum); // 180
+// const sum = addEvenNums(numbers);
+// console.log(sum); // 180
 
 
 
@@ -28,9 +28,7 @@ console.log(sum); // 180
 const numbers = [1, 63, 89, 4, 7, 124, 16, 34, 57, 2, 13];
 
 function minMaxSum(array) {
-  const newArray = array.sort((a, b) => {
-    return a - b;
-  })
+  const newArray = array.sort((a, b) => a - b);
 
   const sum = newArray[0] + newArray[newArray.length - 1];
   return sum < 10 ? 'Zbroj je jednoznamenkast' : `${sum}`;
@@ -77,9 +75,7 @@ console.log(filterFruits(stringsArray));
 const randomArray = [1, 5, 'hello', 34, 'world', 397, false, 'lorem', 24, true, 18, 'ipsum'];
 
 function getReversedNums(array) {
-  const numsArray = array.filter(num => {
-    return typeof num === 'number';
-  })
+  const numsArray = array.filter(num => typeof num === 'number');
 
   return numsArray.reverse();
 }
@@ -106,21 +102,21 @@ console.log(getReversedNums(randomArray));
 
 
 
-function createPattern(value) {
-  let str = '';
+// function createPattern(value) {
+//   let str = '';
 
-  for (let i = 0; i <= value; i++) {
-    str += i;
-  }
+//   for (let i = 0; i <= value; i++) {
+//     str += i;
+//   }
 
 
-  let i = str.length - 1;
+//   let i = str.length - 1;
 
-  while (i >= 0) {
-    console.log(str);
-    i--;
-    str = str.slice(0, -1);
-  }
-}
+//   while (i >= 0) {
+//     console.log(str);
+//     i--;
+//     str = str.slice(0, -1);
+//   }
+// }
 
-createPattern(9);
+// createPattern(9);
