@@ -25,7 +25,7 @@ function minMaxSum(array) {
   const newArray = array.sort((a, b) => a - b);
 
   const sum = newArray[0] + newArray[newArray.length - 1];
-  return sum < 10 ? 'Zbroj je jednoznamenkast' : `${sum}`;
+  return sum < 10 ? 'Zbroj je jednoznamenkast' : sum;
 }
 
 console.log(minMaxSum(numbers)); // 125
@@ -40,6 +40,7 @@ console.log(minMaxSum(numbers)); // 125
 
 // const stringsArray = ['jabuka', 'hello', 'naranca', 'world', 'banana', 'javscript', 'kruska', 'lorem', 'ipsum', 'jagoda']; // test
 const stringsArray = process.argv.slice(2);
+
 
 function filterFruits(array) {
   const fruits = array.filter(fruit => {
@@ -56,7 +57,6 @@ function filterFruits(array) {
 }
 
 console.log(filterFruits(stringsArray));
-
 
 
 
